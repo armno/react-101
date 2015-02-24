@@ -1,0 +1,6 @@
+{
+  "name": "react-101",
+  "dependencies": {
+    "react": "~0.12.2"
+  }
+}
