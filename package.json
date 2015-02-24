@@ -1,0 +1,8 @@
+{
+  "name": "react-101",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-debug": "^2.0.0",
+    "gulp-react": "^2.0.0"
+  }
+}
