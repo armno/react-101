@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var react = require('gulp-react');
+var server = require('gulp-webserver');
 
 gulp.task('jsx', function() {
 	return gulp.src('jsx/**.*')
@@ -7,6 +8,15 @@ gulp.task('jsx', function() {
 		.pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', ['jsx'], function() {
-	gulp.watch(['jsx/**/*'], ['jsx']);
+gulp.task('server', function() {
+	return gulp.src('.')
+		.pipe(server({
+			livereload: true,
+			open: true,
+			port: 9002
+		}));
+});
+
+gulp.task('default', ['server'], function() {
+	gulp.watch('jsx/**/*', ['jsx']);
 });
